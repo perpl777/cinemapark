@@ -6,7 +6,8 @@ import exit from '@/public/exit.svg'
 import Image from 'next/image'
 
 const Header = () => {
-	const hover = 'hover:opacity-50'
+	const hover = 'hover:opacity-50 hover:cursor-pointer duration-200'
+
 	return (
 		<div className='flex flex-row justify-between items-center h-20'>
 			<div className='flex flex-row items-center gap-10'>
