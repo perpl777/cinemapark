@@ -16,7 +16,7 @@ const CardMovie = () => {
 				<Rating stars={4} rating={8.4}></Rating>
 			</div>
 			<div className='mt-1'>
-				<Button label='Подробнее'></Button>
+				<Button>Подробнее</Button>
 			</div>
 		</div>
 	)

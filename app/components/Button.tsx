@@ -1,15 +1,15 @@
-import {FC} from 'react'
+import React, {FC, ReactNode} from 'react'
 
-type Props = {
-	label: string
+interface ButtonProps {
+	children: ReactNode
 }
 
-const Button: FC<Props> = ({ label }) => {
+const Button: FC<ButtonProps> = ({ children }) => {
     const hover = 'hover:bg-violet-800 hover:cursor-pointer duration-200'
 
 	return (
 		<div className={`h-14 flex bg-[#9534D2] rounded-2xl justify-center items-center ${hover}`}>
-			<p className="text-white font-semibold text-center">{label}</p>
+			<p className="text-white font-semibold text-center">{children}</p>
 		</div>
 	)
 }
