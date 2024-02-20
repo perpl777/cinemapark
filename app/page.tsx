@@ -1,4 +1,4 @@
-import CardMovie from "./components/CardMovie/CardMovie"
+import CardMovie from "./components/cardMovie/cardMovie"
 
 export default function Home() {
 	return (

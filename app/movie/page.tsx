@@ -1,52 +1,37 @@
 import React from 'react'
-import MovieImg from '@/public/movieImg.png'
-import Image from 'next/image'
 
-import ScheduleMovie from './schedule-movie'
-import SeatsMovie from './seats-movie'
+import BreadCrumps from '../components/breadcrumps'
+
+import Heading from '../components/cardMovie/heading'
+import Rating from '../components/cardMovie/rating'
+import Poster from '../components/cardMovie/poster'
+import Button from '../components/button'
+import ScheduleMovie from '../components/moviePage/schedule-movie'
+import SeatsMovie from '../components/moviePage/seats-movie'
+
 
 const MoviePage = () => {
-
-    //рейтинг фильма
-    const rating = 4;
-    // функция генерации звездного ерйтинга
-    const renderStars = () => {
-        const stars = [];
-        for (let i = 1; i <= 5; i++) {
-            if (i <= rating) {
-                stars.push(<span key={i} className="text-yellow-400 text-2xl">&#9733;</span>);
-            } else {
-                stars.push(<span key={i} className="text-gray-300 text-2xl">&#9733;</span>);
-            }
-        }
-        return stars;
-    }
-
     
     return (
         <div>
+			<BreadCrumps />
+
             <div className='flex gap-8'>
-
-                <div className='relative inline-block'>
-                    <Image src={MovieImg} alt="movie" />
-
-                    <div className="absolute bottom-0 right-0 
-                        h-12 w-28 flex flex-col items-center justify-center 
-                        rounded-tl-lg bg-gray-100">
-                        <p className='font-medium text-sm'>фантастика</p>
-                        <p className='font-regular text-sm'>США, 2023</p>
-                    </div>
-                </div>
-
+                
+                <div className='w-72'><Poster /></div>
+                
                 <div>
-                    <h1 className='text-3xl font-bold'>Бебка с китсуней (16+)</h1>
-                    <p className='font-regular text-sm text-gray-400 mt-1'>Subtitle</p>
+                    <Heading 
+                        title={'Бебка с китсуней (16+)'} 
+                        subtitle={'Subtitle'}
+                        size={'3xl'}
+                    />
 
-                    <div className="mt-4">
-                        {renderStars()}
-                        <p className='font-regular text-sm text-gray-400 mt-1'>Kinopoisk - 8.4</p>
-                    </div>
-
+                    <Rating 
+                        stars={1} 
+                        rating={8.4}
+                    />
+                    
                     <div className="mt-4 max-w-2xl text-base font-normal">
                         Себастьян планирует провести уикенд со своей очаровательной невестой 
                         Элли и ее семьей в их роскошном фамильном поместье, где есть собственное
@@ -56,9 +41,32 @@ const MoviePage = () => {
             </div>
 
             <ScheduleMovie />
-            <SeatsMovie />
 
-            
+            <div className='flex gap-24 items-end'>
+                
+                <SeatsMovie />
+
+                <div className='flex flex-col gap-4'>
+                    <div className='text-gray-500 text-xs'>
+                        Зал
+                        <p className='text-black text-base'>Синий</p>
+                    </div>
+                    <div className='text-gray-500 text-xs'>
+                        Дата и время
+                        <p className='text-black text-base'>3 июля, 11:15</p>
+                    </div>
+                    <div className='text-gray-500 text-xs'>
+                        Места
+                        <p className='text-black text-base'>2 ряд, 8, 9</p>
+                    </div>
+
+                    <h3 className='font-semibold text-lg'>Сумма: 500 руб</h3>
+
+                    <Button children={'купить'}/>
+                </div>
+                
+            </div>
+
         </div>
     )
 }

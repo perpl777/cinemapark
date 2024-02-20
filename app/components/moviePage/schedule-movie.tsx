@@ -27,10 +27,9 @@ const ScheduleMovie = () => {
 
             <div className='inline-block bg-gray-100 rounded-xl mt-6'>
                 {days.map((day) => 
-                    <button className='bg-slate-100 w-24 h-11 rounded-xl border-solid
-                                        border-gray-100 border-2 text-gray-500 text-sm
+                    <button className='bg-slate-100 w-24 h-11 rounded-xl border-solid border-gray-100 border-2 text-gray-500 text-sm
                                         hover:text-black hover:bg-white'> 
-                        {day} 
+                            {day} 
                     </button>
                 )}
             </div>
@@ -38,15 +37,12 @@ const ScheduleMovie = () => {
             <div>
                 {Object.entries(halls).map(([hall, times]) => (
                     <div key={hall}>
-
                         <p className='text-xs mt-6'> {hall} </p>
-
                         <div className="flex gap-2">
                             {times.map((time, index) => (
                                 <button key={index} 
-                                        className='mt-3 border-solid border-gray-400 border
-                                                    w-20 h-11 rounded-2xl 
-                                                    hover:text-white hover:bg-gray-400 '>
+                                        className='mt-3 border-solid border-gray-400 border w-20 h-11 rounded-2xl 
+                                                hover:text-white hover:bg-gray-400 '>
                                     {time}
                                 </button>
                             ))}

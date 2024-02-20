@@ -1,7 +1,7 @@
-import Poster from './Poster'
-import Heading from './Heading'
-import Button from '../Button'
-import Rating from './Rating'
+import Poster from './poster'
+import Heading from './heading'
+import Button from '../button'
+import Rating from './rating'
 
 const CardMovie = () => {
 	return (
