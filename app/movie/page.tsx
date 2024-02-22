@@ -5,9 +5,7 @@ import BreadCrumps from '../components/breadcrumps'
 import Heading from '../components/cardMovie/heading'
 import Rating from '../components/cardMovie/rating'
 import Poster from '../components/cardMovie/poster'
-import Button from '../components/button'
-import ScheduleMovie from '../components/moviePage/schedule-movie'
-import SeatsMovie from '../components/moviePage/seats-movie'
+import MovieDetails from '../components/moviePage/movie-details'
 
 
 const MoviePage = () => {
@@ -17,7 +15,7 @@ const MoviePage = () => {
 			<BreadCrumps />
 
             <div className='flex gap-8'>
-                
+
                 <div className='w-72'><Poster /></div>
                 
                 <div>
@@ -28,7 +26,7 @@ const MoviePage = () => {
                     />
 
                     <Rating 
-                        stars={1} 
+                        stars={3} 
                         rating={8.4}
                     />
                     
@@ -40,32 +38,7 @@ const MoviePage = () => {
                 </div>
             </div>
 
-            <ScheduleMovie />
-
-            <div className='flex gap-24 items-end'>
-                
-                <SeatsMovie />
-
-                <div className='flex flex-col gap-4'>
-                    <div className='text-gray-500 text-xs'>
-                        Зал
-                        <p className='text-black text-base'>Синий</p>
-                    </div>
-                    <div className='text-gray-500 text-xs'>
-                        Дата и время
-                        <p className='text-black text-base'>3 июля, 11:15</p>
-                    </div>
-                    <div className='text-gray-500 text-xs'>
-                        Места
-                        <p className='text-black text-base'>2 ряд, 8, 9</p>
-                    </div>
-
-                    <h3 className='font-semibold text-lg'>Сумма: 500 руб</h3>
-
-                    <Button children={'купить'}/>
-                </div>
-                
-            </div>
+            <MovieDetails />
 
         </div>
     )
