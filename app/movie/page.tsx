@@ -24,7 +24,7 @@ const MoviePage = () => {
                     <Heading 
                         title={'Бебка с китсуней (16+)'} 
                         subtitle={'Subtitle'}
-                        size={'3xl'}
+                        size={'xl'}
                     />
 
                     <Rating 
