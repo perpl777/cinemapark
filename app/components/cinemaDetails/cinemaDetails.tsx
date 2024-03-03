@@ -11,7 +11,7 @@ import TicketInfo from './ticket-info';
 import { time } from 'console';
 
 
-const MovieDetails = () => {
+const CinemaDetails = () => {
 
     const [day, setDay] = useState('не выбрано')
     const [timeHall, setTimeHall] = useState<{ time: string, hall: string }>({ time: 'не выбрано', hall: 'не выбрано' });
@@ -70,4 +70,4 @@ const MovieDetails = () => {
     )
 }
 
-export default MovieDetails
+export default CinemaDetails

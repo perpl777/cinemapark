@@ -1,11 +1,11 @@
 import React from 'react'
 
-import BreadCrumps from '../components/breadcrumps'
+import BreadCrumps from '../components/bread-crumps'
 
 import Heading from '../components/cardMovie/heading'
 import Rating from '../components/cardMovie/rating'
 import Poster from '../components/cardMovie/poster'
-import MovieDetails from '../components/moviePage/movie-details'
+import CinemaDetails from '../components/cinemaDetails/cinemaDetails'
 
 
 const MoviePage = () => {
@@ -38,7 +38,7 @@ const MoviePage = () => {
                 </div>
             </div>
 
-            <MovieDetails />
+            <CinemaDetails />
 
         </div>
     )

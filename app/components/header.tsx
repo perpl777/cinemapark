@@ -18,7 +18,7 @@ const Header = () => {
 				<Link href='/profile' className={hover}>
 					Профиль
 				</Link>
-				<Link href='/ticket' className={hover}>
+				<Link href='/tickets' className={hover}>
 					Билеты
 				</Link>
 			</div>
